@@ -146,8 +146,8 @@
 </div>
 
 <script src="reactive_signal.js"></script>
-
-$1
+<script>
+  var stage = new NGL.Stage("ngl-viewer");
   var currentComp;
 
   stage.loadFile("final_structure.pdb", { defaultRepresentation: true }).then(function (comp) {
@@ -168,7 +168,10 @@ $1
     const reader = new FileReader();
     reader.onload = function (ev) {
       stage.removeAllComponents();
-      stage.loadFile(new Blob([ev.target.result], { type: 'text/plain' }), { ext: 'pdb', defaultRepresentation: true }).then(function (comp) {
+      stage.loadFile(new Blob([ev.target.result], { type: 'text/plain' }), {
+        ext: 'pdb',
+        defaultRepresentation: true
+      }).then(function (comp) {
         currentComp = comp;
         stage.autoView();
       });
@@ -176,6 +179,7 @@ $1
     reader.readAsText(file);
   });
 </script>
+
 
 <div class="github-button">
   <a href="https://github.com/Mukhameds/-Signal-Folding-Engine-Pro" target="_blank">
