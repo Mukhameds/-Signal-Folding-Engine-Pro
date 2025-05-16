@@ -11,9 +11,13 @@ function activateReactive() {
     const psi = (Math.random() * 360 - 180).toFixed(2);
     const message = `Signal → φ=${phi}°, ψ=${psi}° → Torsion Adjusted`;
     console.log(message);
+
+    const readout = document.getElementById("signal-readout");
+    if (readout) {
+      readout.textContent = `Signal φ: ${phi}°, ψ: ${psi}°`;
+    }
   }, 1000);
 
-  // Optional: stop after 10s
   setTimeout(() => {
     clearInterval(interval);
     console.log("🛑 Reactive Mode paused");
