@@ -123,7 +123,10 @@
     and phantom excitation fields. No statistical ML, no black-box networks — just raw causality, energy logic, and STB-formalized signal interaction.
   </p>
   <p>
-    This is the <strong>MVP (Minimum Viable Prototype)</strong> version — the foundation of a full-scale simulator. Work has only just begun. The core engine is functional and being extended step by step.
+    This is the <strong>MVP (Minimum Viable Prototype)</strong> version — the foundation of a full-scale simulator. Work has only just begun.
+  </p>
+  <p style="margin-top:1rem; background-color: #002222; padding: 1rem; border-left: 4px solid #00ccff;">
+    ✅ <strong>Now entering Reactive Mode:</strong> The engine is being upgraded to include signal-based torsion adjustment, energy fields, and reactive phantom suppression. Future updates will bring dynamic φ/ψ excitation and heatmap visualization.
   </p>
 </div>
 
@@ -142,8 +145,9 @@
   <input type="file" id="file-input" accept=".pdb" />
 </div>
 
-<script>
-  var stage = new NGL.Stage("ngl-viewer");
+<script src="reactive_signal.js"></script>
+
+$1
   var currentComp;
 
   stage.loadFile("final_structure.pdb", { defaultRepresentation: true }).then(function (comp) {
