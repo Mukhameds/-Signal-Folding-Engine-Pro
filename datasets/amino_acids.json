@@ -1,0 +1,22 @@
+{
+  "A": { "name": "Alanine",       "mass": 89.09,  "charge": 0,   "hydrophobic": 1.8,  "volume": 88.6 },
+  "C": { "name": "Cysteine",      "mass": 121.15, "charge": 0,   "hydrophobic": 2.5,  "volume": 108.5 },
+  "D": { "name": "Aspartic Acid", "mass": 133.10, "charge": -1,  "hydrophobic": -3.5, "volume": 111.1 },
+  "E": { "name": "Glutamic Acid", "mass": 147.13, "charge": -1,  "hydrophobic": -3.5, "volume": 138.4 },
+  "F": { "name": "Phenylalanine", "mass": 165.19, "charge": 0,   "hydrophobic": 2.8,  "volume": 189.9 },
+  "G": { "name": "Glycine",       "mass": 75.07,  "charge": 0,   "hydrophobic": -0.4, "volume": 60.1 },
+  "H": { "name": "Histidine",     "mass": 155.16, "charge": 0.1, "hydrophobic": -3.2, "volume": 153.2 },
+  "I": { "name": "Isoleucine",    "mass": 131.17, "charge": 0,   "hydrophobic": 4.5,  "volume": 166.7 },
+  "K": { "name": "Lysine",        "mass": 146.19, "charge": 1,   "hydrophobic": -3.9, "volume": 168.6 },
+  "L": { "name": "Leucine",       "mass": 131.17, "charge": 0,   "hydrophobic": 3.8,  "volume": 166.7 },
+  "M": { "name": "Methionine",    "mass": 149.21, "charge": 0,   "hydrophobic": 1.9,  "volume": 162.9 },
+  "N": { "name": "Asparagine",    "mass": 132.12, "charge": 0,   "hydrophobic": -3.5, "volume": 114.1 },
+  "P": { "name": "Proline",       "mass": 115.13, "charge": 0,   "hydrophobic": -1.6, "volume": 112.7 },
+  "Q": { "name": "Glutamine",     "mass": 146.15, "charge": 0,   "hydrophobic": -3.5, "volume": 143.8 },
+  "R": { "name": "Arginine",      "mass": 174.20, "charge": 1,   "hydrophobic": -4.5, "volume": 173.4 },
+  "S": { "name": "Serine",        "mass": 105.09, "charge": 0,   "hydrophobic": -0.8, "volume": 89.0 },
+  "T": { "name": "Threonine",     "mass": 119.12, "charge": 0,   "hydrophobic": -0.7, "volume": 116.1 },
+  "V": { "name": "Valine",        "mass": 117.15, "charge": 0,   "hydrophobic": 4.2,  "volume": 140.0 },
+  "W": { "name": "Tryptophan",    "mass": 204.23, "charge": 0,   "hydrophobic": -0.9, "volume": 227.8 },
+  "Y": { "name": "Tyrosine",      "mass": 181.19, "charge": 0,   "hydrophobic": -1.3, "volume": 193.6 }
+}
