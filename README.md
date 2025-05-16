@@ -78,6 +78,17 @@ go run .
 
 ---
 
-## 🧑‍💻 Created by
+## 🧑‍💻 Author & Contact
 
-[Mukhameds](https://github.com/Mukhameds) — developer of ARU, STB, and reactive AGI systems.
+**Muhamed Kamilovich Satybaev**  
+Bishkek, Kyrgyzstan  
+📧 Email: satybaevmk@gmail.com  
+🔗 GitHub: [https://github.com/Mukhameds](https://github.com/Mukhameds)  
+🔗 LinkedIn: [https://www.linkedin.com/in/muhamed-satybaev-38b864362](https://www.linkedin.com/in/muhamed-satybaev-38b864362)  
+🔗 Telegram: [https://t.me/satybaevmk](https://t.me/satybaevmk)
+
+---
+
+## 📄 License
+
+Non-commercial use only. Redistribution for academic/scientific purposes requires attribution. Commercial use is **strictly prohibited** without written permission. See [LICENSE](LICENSE) for details.
