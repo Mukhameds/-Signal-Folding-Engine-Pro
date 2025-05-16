@@ -1,0 +1,21 @@
+function activateReactive() {
+  if (!currentComp) {
+    console.warn("No structure loaded");
+    return;
+  }
+
+  console.log("🧠 Reactive Mode ON: starting φ/ψ signal propagation...");
+
+  const interval = setInterval(() => {
+    const phi = (Math.random() * 360 - 180).toFixed(2);
+    const psi = (Math.random() * 360 - 180).toFixed(2);
+    const message = `Signal → φ=${phi}°, ψ=${psi}° → Torsion Adjusted`;
+    console.log(message);
+  }, 1000);
+
+  // Optional: stop after 10s
+  setTimeout(() => {
+    clearInterval(interval);
+    console.log("🛑 Reactive Mode paused");
+  }, 10000);
+}
