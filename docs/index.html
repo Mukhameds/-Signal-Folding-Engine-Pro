@@ -84,7 +84,7 @@
       text-align: center;
       margin: 1.5rem auto;
     }
-    .controls button {
+    .controls button, .controls input[type="file"] {
       margin: 0.3rem;
       padding: 0.5rem 1.2rem;
       background-color: #00ccff;
@@ -98,6 +98,13 @@
     }
     .controls button:hover {
       background-color: #00aacc;
+    }
+    .controls input[type="file"] {
+      background-color: #00141a;
+      color: #ccffff;
+      border: 2px solid #00ccff;
+      box-shadow: none;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -132,6 +139,7 @@
   <button onclick="setStyle('ball+stick')">⚛️ Ball & Stick</button>
   <button onclick="setStyle('surface')">🧱 Surface</button>
   <button onclick="stage.autoView()">🔄 Reset View</button>
+  <input type="file" id="file-input" accept=".pdb" />
 </div>
 
 <script>
@@ -149,6 +157,20 @@
       stage.autoView();
     }
   }
+
+  document.getElementById("file-input").addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function (ev) {
+      stage.removeAllComponents();
+      stage.loadFile(new Blob([ev.target.result], { type: 'text/plain' }), { ext: 'pdb', defaultRepresentation: true }).then(function (comp) {
+        currentComp = comp;
+        stage.autoView();
+      });
+    };
+    reader.readAsText(file);
+  });
 </script>
 
 <div class="github-button">
