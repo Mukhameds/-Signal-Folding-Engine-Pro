@@ -80,6 +80,25 @@
       border-radius: 8px;
       box-shadow: 0 0 12px #00ccff33;
     }
+    .controls {
+      text-align: center;
+      margin: 1.5rem auto;
+    }
+    .controls button {
+      margin: 0.3rem;
+      padding: 0.5rem 1.2rem;
+      background-color: #00ccff;
+      border: none;
+      color: #000;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+      box-shadow: 0 0 8px #00ccff66;
+    }
+    .controls button:hover {
+      background-color: #00aacc;
+    }
   </style>
 </head>
 <body>
@@ -107,9 +126,29 @@
 </div>
 
 <div class="ngl-container" id="ngl-viewer"></div>
+
+<div class="controls">
+  <button onclick="setStyle('cartoon')">🧬 Cartoon</button>
+  <button onclick="setStyle('ball+stick')">⚛️ Ball & Stick</button>
+  <button onclick="setStyle('surface')">🧱 Surface</button>
+  <button onclick="stage.autoView()">🔄 Reset View</button>
+</div>
+
 <script>
   var stage = new NGL.Stage("ngl-viewer");
-  stage.loadFile("final_structure.pdb", { defaultRepresentation: true });
+  var currentComp;
+
+  stage.loadFile("final_structure.pdb", { defaultRepresentation: true }).then(function (comp) {
+    currentComp = comp;
+  });
+
+  function setStyle(style) {
+    if (currentComp) {
+      currentComp.removeAllRepresentations();
+      currentComp.addRepresentation(style);
+      stage.autoView();
+    }
+  }
 </script>
 
 <div class="github-button">
