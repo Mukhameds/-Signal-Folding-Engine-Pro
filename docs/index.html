@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Signal Folding Engine Pro</title>
+  <script src="https://unpkg.com/ngl@2.0.0-dev.39/dist/ngl.js"></script>
   <style>
     body {
       margin: 0;
@@ -70,6 +71,15 @@
       background-color: #00aacc;
       box-shadow: 0 0 16px #00ccff;
     }
+    .ngl-container {
+      width: 100%;
+      max-width: 960px;
+      height: 500px;
+      margin: 3rem auto;
+      border: 2px solid #00ccff;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #00ccff33;
+    }
   </style>
 </head>
 <body>
@@ -95,6 +105,12 @@
   <h2>📈 Final Structure Projection</h2>
   <img src="final_structure.svg" alt="SVG Projection" />
 </div>
+
+<div class="ngl-container" id="ngl-viewer"></div>
+<script>
+  var stage = new NGL.Stage("ngl-viewer");
+  stage.loadFile("final_structure.pdb", { defaultRepresentation: true });
+</script>
 
 <div class="github-button">
   <a href="https://github.com/Mukhameds/-Signal-Folding-Engine-Pro" target="_blank">
